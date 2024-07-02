@@ -1,6 +1,6 @@
 <?php
 
-$api_key = '03b234130a743444a38c212a4233c4dd';
+$api_key = '';
 $city = isset($_POST['city']) ? htmlspecialchars($_POST['city']) : 'london';  // Default city is 'london'
 $api = "http://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$api_key}&units=metric";
 
