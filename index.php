@@ -1,7 +1,7 @@
 <?php
 
-$api_key = '';
-$city = isset($_POST['city']) ? htmlspecialchars($_POST['city']) : 'london';
+$api_key = '03b234130a743444a38c212a4233c4dd';
+$city = isset($_POST['city']) ? htmlspecialchars($_POST['city']) : 'london';  // Default city is 'london'
 $api = "http://api.openweathermap.org/data/2.5/weather?q={$city}&appid={$api_key}&units=metric";
 
 $curl = curl_init();
@@ -11,8 +11,6 @@ $resp = curl_exec($curl);
 curl_close($curl);
 
 $data = json_decode($resp, true);
-
-file_put_contents('data.json', json_encode($data));
 
 $error = '';
 
